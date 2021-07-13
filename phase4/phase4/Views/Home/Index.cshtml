@@ -1,0 +1,88 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <label>pizza selection </label>
+</div>
+<!--
+<form action="/action_page.php">
+    <p>Please select your favorite Pizza:</p>
+    <input type="radio" id="cheese" name="fav_language" value="cheese">
+    <label for="cheese">cheese</label><br>
+    <input type="radio" id="BBQ" name="fav_language" value="BBQ">
+    <label for="BBQ">BBQ</label><br>
+    <!--   <input type="MEAT" id="MEAT" name="fav_language" value="MEAT">
+        <label for="MEAT">MEAT</label>
+        <input type="Veggies" id="Veggies" name="fav_language" value="Veggies">
+        <label for="Veggies">Veggies</label>
+
+    <br>
+
+    <p>Please select size:</p>
+    <input type="radio" id="small" name="size" value="small">
+    <label for="small"> small</label><br>
+    <input type="radio" id="medium" name="size" value="medium">
+    <label for="medium">medium</label><br>
+    <input type="radio" id="Large" name="size" value="Large">
+    <label for="Large">Large</label><br><br>
+</form>
+
+@using (Html.BeginForm("Greetings", "Home", FormMethod.Post))
+{
+    <table cellpadding="2" cellspacing="0" border="0">
+        <tr>
+            <td>Write your order and size example (BBQ,small):</td>
+            <td>
+            <td>
+
+                @Html.TextBox("Name")
+            </td>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Submit" asp-action="Privacy">
+            </td>
+        </tr>
+    </table>
+}
+-->
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    @using (Html.BeginForm("checkout", "Home", FormMethod.Post))
+    {
+            <h1>Please select your favorite Pizza:</h1>
+            <label for="cheese">cheese</label><br>
+            <label for="BBQ">BBQ</label><br>
+                    <label for="MEAT">MEAT</label>
+                    <label for="Veggies">Veggies</label>
+
+                <br>
+
+                <h1>Please select size:</h1>
+                <label for="small"> small</label><br>
+                <label for="medium">medium</label><br>
+                <label for="Large">Large</label><br><br>
+
+                    <table cellpadding="2" cellspacing="0" border="0">
+                        <tr>
+                            <td>Write your order and size example (BBQ,small):</td>
+                            <td>
+                                @Html.TextBox("Name");
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input id="submit" type="submit" value="Submit" /></td>
+                        </tr>
+                    </table>
+                }
+            </body>
+            </html>

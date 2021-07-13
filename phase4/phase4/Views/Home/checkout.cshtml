@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Checkout page";
+}
+<h1>@ViewData["Title"]</h1>
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Checkout page</title>
+</head>
+<body>
+    @using (Html.BeginForm("confirm", "Home", FormMethod.Post))
+    {
+
+        <span>Order:  </span>
+        @ViewBag.Name
+        <br />
+        <br />
+        <input type="submit" value="confirm">
+    }
+</body>
+</html>
